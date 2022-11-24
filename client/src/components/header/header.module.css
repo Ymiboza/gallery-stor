@@ -1,0 +1,91 @@
+.main__header {
+  position: relative;
+}
+
+.main__header::after {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: calc(var(--index) * 5.5);
+  background-image: url(../../image/Solid.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0);
+  bottom: calc(var(--index) * -3);
+}
+.layers {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+  transition: var(--transition);
+}
+.layers__base {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+  z-index: 0;
+  background-image: url(../../image/Base.png);
+}
+.layers__middle {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.3), 0);
+  background-image: url(../../image/Cloud.png);
+}
+.layers__front {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.8), 0);
+  background-image: url(../../image/Castle.png);
+  z-index: 3;
+}
+.layers__other {
+  transform: translate3d(0, calc(var(--scrollTop) / 3), 0);
+  background-image: url(../../image/CastleMini.png);
+}
+.layers__otherTwo {
+  transform: translate3d(0, calc(var(--scrollTop) / 3), 0);
+  background-image: url(../../image/Mag.png);
+}
+
+.layers__preFront {
+  transform: translate3d(1, calc(var(--scrollTop) / 80), 0);
+  background-image: url(../../image/Ground.png);
+  z-index: 4;
+}
+
+.layer__header {
+  z-index: 2;
+  transform: translate3d(0, calc(var(--scrollTop) / 1.7), 0);
+  transition: var(--transition);
+  will-change: transform;
+  white-space: pre-line;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  position: absolute;
+  top: 10%;
+  opacity: 1;
+}
+.layers__title {
+  font-size: calc(var(--index) * 3.7);
+  font-weight: 900;
+  letter-spacing: calc(var(--index) / 2.25);
+  color: white;
+  text-shadow: 2px 2px 20px red;
+}
+.layers__caption {
+  font-size: calc(var(--index) / 1);
+  letter-spacing: calc(var(--index) / 3.5);
+  margin-top: calc(var(--index) * -0.75);
+  color: white;
+  text-shadow: 2px 2px 20px red;
+}

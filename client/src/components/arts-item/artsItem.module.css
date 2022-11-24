@@ -1,0 +1,48 @@
+.artItem {
+  margin: 10px 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.artLink {
+  cursor: pointer;
+}
+
+.imageItem {
+  object-fit: cover;
+  height: 100%;
+  filter: saturate(0.5);
+}
+
+.imageItem:hover {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+.imageItem:hover + .infoItem {
+  opacity: 1;
+}
+
+.infoItem:hover {
+  opacity: 1;
+  text-shadow: 5px 5px 5px red;
+}
+
+.infoItem {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  color: white;
+  opacity: 0;
+}
+
+@media (max-width: 720px) {
+  .imageItem {
+    filter: saturate(1);
+  }
+  .imageItem:hover {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+}

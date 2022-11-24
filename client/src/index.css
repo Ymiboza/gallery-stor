@@ -1,0 +1,74 @@
+@import "./components/header/header.module.css";
+@import "./components/arts-item/artsItem.module.css";
+@import "./components/arts/arts.module.css";
+@import "./components/spinner/spinner.module.css";
+@import "./components/wrapper/wrapper.module.css";
+
+@font-face {
+  font-family: "Ilyas";
+  src: url("./fonts/ilyas.woff2") format("woff2"),
+    url("./fonts/ilyas.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEIMA";
+  src: url("./fonts/NEIMA.woff2") format("woff2"),
+    url("./fonts/NEIMA.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NEIMA-Regular";
+  src: url("./fonts/NEIMARegular.woff2") format("woff2"),
+    url("./fonts/NEIMARegular.woff") format("woff");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --text: #e7e7e0;
+  --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  line-height: 1.5;
+  background-color: black;
+  font-family: "Ilyas";
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  outline: none;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* background-color: #c80000; */
