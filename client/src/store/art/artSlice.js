@@ -65,5 +65,19 @@ const artSlice = createSlice({
       });
   },
 });
+
+const gridSlice = createSlice({
+  name: "grid",
+  initialState: true,
+  reducers: {
+    changeState: (state, action) => {
+      console.log(state);
+      console.log(action);
+      return !state;
+    },
+  },
+});
+
 export const resetArtErrors = artSlice.actions;
 export default artSlice.reducer;
+export const gridSliceAction = gridSlice.actions.changeState;

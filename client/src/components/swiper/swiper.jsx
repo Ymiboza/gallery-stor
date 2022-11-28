@@ -5,7 +5,6 @@ import ArtsItem from '../arts-item/artsItem';
 import styles from './swiper.module.css'
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import Button from '../button/button.jsx';
 
 
 
