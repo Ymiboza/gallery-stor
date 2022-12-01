@@ -4,15 +4,14 @@ import Arts from '../../components/arts/arts'
 import Wrapper from '../../components/wrapper/wrapper'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ScrollSmoother from "../../libs/gsap/ScrollSmoother.min.js";
+import { ScrollSmoother } from "../../libs/gsap/ScrollSmoother.min.js";
 
 
 const HomePage = () => {
-    const wrapper = document.querySelector('.main__header')
     window.addEventListener("scroll", (e) => {
         document.documentElement.style.setProperty(
             "--scrollTop",
-            `${window.scrollY}px`,
+            `${window.scrollY}px`
         );
     });
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);

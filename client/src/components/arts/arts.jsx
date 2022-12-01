@@ -14,13 +14,11 @@ import { useState } from 'react'
 import ClassicThem from '../classic-them/classic-them'
 import ArtsText from '../arts-text/arts-text'
 import Switch from '../switch/switch'
-import { gridSliceAction } from '../../store/art/artSlice'
 
 const Arts = () => {
     const dispatch = useDispatch()
     const { arts, isLoading } = useSelector((state) => state.arts)
     const { isDescSort, setIsDescSort, sortedArts } = useSortArts(arts || [])
-    const isGrid = useSelector((state) => state.grid)
     const [isGridThem, setIsGridThem] = useState(false)
     const [isGridText, setIsGridText] = useState(false)
 
@@ -33,7 +31,6 @@ const Arts = () => {
     }
 
     const changeThem = () => {
-        dispatch(gridSliceAction(!isGrid))
         setIsGridThem(!isGridThem)
         setIsGridText(!isGridText)
     }
@@ -62,7 +59,7 @@ const Arts = () => {
                 </Wrapper>
             </div>
             <Wrapper containerName={styles.container__arts} contentName={styles.content__arts}>
-                {isGridText ? ("") : (<ArtsText></ArtsText>)}
+                {isGridThem ? ("") : (<ArtsText></ArtsText>)}
                 {isGridThem ? (<ClassicThem className={styles.size__grid} sortedArts={sortedArts} />) : (<Swipers images={sortedArts}></Swipers>)}
             </Wrapper>
         </div>
